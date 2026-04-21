@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio</title>
+
+    <!-- Fonts + icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/hobby.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/careerinfo.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/lightbox.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <!-- Particle canvas behind everything -->
+    <canvas
+      id="particle-canvas"
+      style="position: fixed; inset: 0; z-index: -2"
+    ></canvas>
+
+    <!-- Header -->
+    <header class="site-header" id="siteHeader">
+      <div class="header-inner container">
+        <a class="brand" href="#home">
+          <div class="logo">
+            <img src="./img/conmeo.png" alt="" />
+          </div>
+          <div class="brand-text">
+            <div class="name">Phan Văn Đỉnh</div>
+            <div class="role small">Software Engineer</div>
+          </div>
+        </a>
+
+        <nav class="site-nav" id="siteNav">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#career" class="nav-link">Career Info</a>
+          <a href="#hobby" class="nav-link">Hobby</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button id="navToggleBtn" class="nav-toggle">
+            <i class="bx bx-menu"></i>
+          </button>
+          <button id="themeBtn" class="theme-toggle">Download CV</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">  
+      <div class="hero-inner container">
+        <div class="hero-left">
+          <div class="eyebrow">Hi — I'm</div>
+          <h1><span class="neon">Phan Văn Đỉnh</span></h1>
+          <p class="lead">
+            I am a tech enthusiast who loves to code and create amazing digital
+            experiences.
+          </p>
+
+          <div id="typewriter" class="typewriter"></div>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">View Project</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+
+          <div class="social small muted" style="margin-top: 12px">
+            <a href="https://github.com/PhanDinh2005"
+              ><i class="bx bxl-github"></i> github.com/PhanDinh2005</a
+            >
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div id="avatarWrapper" class="avatar-wrapper">
+            <img id="avatarImg" src="img/nhokhoc.png" alt="avatar profile" />
+            <div class="avatar-glow"></div>
+          </div>
+        </div>
+      </div>
+      <svg class="hero-wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C300,100 900,100 1200,0 L1200,120 L0,120 Z"></path>
+      </svg>
+    </section>
+
+    <!-- About -->
+<!-- About Me Card -->
+<div id="about" class="about-card">
+  <!-- Text Section -->
+  <div class="about-me">
+    <h3 class="section-subtitle">About Me</h3>
+    <p class="about-text">
+      Hi, I'm <strong>Phan Văn Đỉnh</strong>, a 3rd-year IT student with a deep passion for coding and crafting digital experiences. 
+      Beyond programming, I’m captivated by <span class="highlight">astronomy</span>—spending my free time stargazing, tracing constellations, and marveling at the vastness of the night sky. 
+      I enjoy exploring <span class="highlight">UI/UX design</span> and creative coding projects, where logic meets visual storytelling, inspired by the elegance and mystery of the cosmos. 
+      For me, the stars are not just distant lights—they are a source of <span class="highlight">ideas, reflection, and endless curiosity</span>.
+    </p>
+
+    <h3 class="section-subtitle">Career Direction</h3>
+    <p class="about-text">
+      I aim to combine <span class="highlight">IT with design and front-end development</span>, leveraging programming, UX principles, 
+      and creative thinking to craft meaningful digital experiences. My goal is to become a <span class="highlight">tech creator</span>, 
+      helping products communicate their value clearly and beautifully to users.
+    </p>
+
+    <ul class="about-meta">
+      <li><strong>Degree:</strong> Information Technology</li>
+      <li><strong>Location:</strong> TP. HCM</li>
+      <li><strong>Email:</strong> dinhphan0511@gmail.com</li>
+    </ul>
+  </div>
+
+  <!-- Images Section -->
+  <div class="about-images-card">
+    <div class="img-wrapper">
+      <img src="img/anhdai1.png" alt="Profile Image 1">
+    </div>
+    <div class="img-wrapper">
+      <img src="img/anhdai2.png" alt="Profile Image 2">
+    </div>
+    <div class="img-wrapper">
+      <img src="img/anhbautroi.png" alt="Profile Image 3">
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox HTML -->
+<div id="lightbox" class="lightbox">
+  <img class="lightbox-img" src="" alt="">
+  <span class="close">&times;</span>
+</div>
+
+
+
+
+<section id="career" class="container-section container reveal">
+  <h2 class="section-title">Career <span>Info & Goal</span></h2>
+
+  <div class="career-goal-card reveal-card">
+    <div class="career-content slide-left">
+      <h3>Career Info</h3>
+      <ul>
+        <li><strong>Current Position:</strong> Frontend Developer</li>
+        <li><strong>Company:</strong> Freelancer / Personal Projects</li>
+        <li><strong>Core Skills:</strong> HTML, CSS, JavaScript, React, C++, Python</li>
+        <li><strong>Experience:</strong> 2 years</li>
+      </ul>
+    </div>
+
+    <div class="goal-content slide-right">
+      <h3>Career Goal</h3>
+      <p>
+        Aiming to advance Frontend skills, build creative UI/UX projects, 
+        enhance programming & design capabilities, and pursue a Fullstack Developer role within 2 years.
+      </p>
+      <div class="goal-tags">
+        <span class="tag">Frontend</span>
+        <span class="tag">UI/UX</span>
+        <span class="tag">Fullstack</span>
+        <span class="tag">React</span>
+        <span class="tag">C++</span>
+        <span class="tag">Python</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Hobbies -->
+<section class="hobby" id="hobby">
+  <div class="container-section">
+    <h2 class="section-title"><span>Hobbies</span></h2>
+
+    <div class="hobby-wrapper">
+      <div class="hobby-box">
+        <i class="bx bx-code"></i>
+        <h3 class="led-text">Coding</h3>
+        <p>Creating cool projects and solving problems</p>
+      </div>
+
+      <div class="hobby-box">
+        <i class="bx bx-book"></i>
+        <h3 class="led-text">Reading</h3>
+        <p>Exploring knowledge and ideas</p>
+      </div>
+
+      <div class="hobby-box">
+        <i class="bx bx-game"></i>
+        <h3 class="led-text">Gaming</h3>
+        <p>Having fun and relaxing</p>
+      </div>
+
+      <div class="hobby-box">
+        <i class="bx bx-tv"></i>
+        <h3 class="led-text">Watching Anime</h3>
+        <p>Enjoying stories and animation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="container-section container reveal">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-pill card">
+          <strong>HTML & CSS</strong>
+          <div class="progress"><span data-target="90"></span></div>
+        </div>
+        <div class="skill-pill card">
+          <strong>JavaScript</strong>
+          <div class="progress"><span data-target="60"></span></div>
+        </div>
+        <div class="skill-pill card">
+          <strong>React</strong>
+          <div class="progress"><span data-target="30"></span></div>
+        </div>
+        <div class="skill-pill card">
+          <strong>C++</strong>
+          <div class="progress"><span data-target="90"></span></div>
+        </div>
+        <div class="skill-pill card">
+          <strong>Python</strong>
+          <div class="progress"><span data-target="90"></span></div>
+        </div>
+        <div class="skill-pill card">
+          <strong>DS</strong>
+          <div class="progress"><span data-target="73"></span></div>
+        </div>
+        <div class="skill-pill card">
+          <strong>Soft Skills</strong>
+          <div class="progress"><span data-target="58"></span></div>
+        </div>
+        <div class="skill-pill card">
+          <strong>Tiếng Việt</strong>
+          <div class="progress"><span data-target="100"></span></div>
+        </div>
+        <div class="skill-pill card">
+          <strong>English</strong>
+          <div class="progress"><span data-target="60"></span></div>
+        </div>
+      </div>
+    </section>
+<!-- experience -->
+<section id="experience" class="container-section container reveal">
+  <h2 class="section-title">Experience & Timeline</h2>
+  <div class="timeline-wrapper">
+    <!-- Thanh tiến trình -->
+    <div class="timeline-line">
+      <div class="timeline-progress"></div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item left card" data-point="1">
+        <div class="time">Sep 2023 — Dec 2023</div>
+        <div class="title">Năm 1</div>
+        <div class="small muted">Toán 1, Lập trình cơ bản, Tin học đại cương
+</div>
+        <div class="timeline-point"></div>
+      </div>
+
+      <div class="timeline-item right card" data-point="2">
+        <div class="time">Jan 2024 — Jun 2024</div>
+        <div class="title">Năm 1 kỳ 2</div>
+        <div class="small muted">C++,CTDL & GT, TRR, MMT</div>
+        <div class="timeline-point"></div>
+      </div>
+
+      <div class="timeline-item left card" data-point="3">
+        <div class="time">Sep 2024 — Jun 2025</div>
+        <div class="title">Năm 2</div>
+        <div class="small muted">OS, Computer Architecture, Web Basics,...</div>
+        <div class="timeline-point"></div>
+      </div>
+
+      <div class="timeline-item right card" data-point="4">
+        <div class="time">Jul 2025 — Present</div>
+        <div class="title">Năm 3</div>
+        <div class="small muted">Frontend, Personal Projects</div>
+        <div class="timeline-point"></div>
+      </div>
+
+      <div class="timeline-item left card" data-point="5">
+        <div class="time">Jan 2026 — Mar 2026</div>
+        <div class="title">Coming Soon</div>
+        <div class="small muted"></div>
+        <div class="timeline-point"></div>
+      </div>
+
+      <div class="timeline-item right card" data-point="6">
+        <div class="time">Apr 2026 — Dec 2026</div>
+        <div class="title">Coming Soon</div>
+        <div class="small muted"></div>
+        <div class="timeline-point"></div>
+      </div>
+      <div class="timeline-line">
+  <div class="timeline-progress"></div>
+  <div class="timeline-end">🏁</div> <!-- cờ end -->
+</div>
+
+    </div>
+    
+  </div>
+</section>
+
+
+
+
+<!-- Projects -->
+<section id="projects" class="container-section container reveal">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-grid">
+    
+    <div class="project-card reveal-card" data-github="https://github.com/PhanDinh2005" data-demo="#">
+      <div class="inner card">
+        <div class="project-media">
+          <img src="img/prj1.png" alt="Portfolio" />
+        </div>
+        <div class="project-body">
+          <h3>Portfolio</h3>
+          <p>My personal portfolio showcasing UI/UX and frontend skills.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JS</span>
+          </div>
+          <a class="link view-btn">View →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal-card" data-github="#" data-demo="#">
+      <div class="inner card">
+        <div class="project-media">
+          <img src="img/prj2.png" alt="Web mua bán sách" />
+        </div>
+        <div class="project-body">
+          <h3>Web mua bán sách</h3>
+          <p>Web bán sách trực tuyến, UI tối giản, dễ dùng.</p>
+          <div class="tags">
+            <span class="tag">Coming Soon</span>
+          </div>  
+          <a class="link view-btn">View →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Project Modal -->
+<div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+  <div class="modal-content glass" role="document">
+    <div class="modal-header">
+      <h3 id="modal-title">Project Details</h3>
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <p id="modal-desc"></p>
+      <div class="modal-links">
+        <a id="modal-github" href="#" target="_blank">GitHub</a>
+        <a id="modal-demo" href="#" target="_blank">Live Demo</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Gallery -->
+<section id="gallery" class="container-section container reveal">
+  <h2 class="section-title">Gallery</h2>
+  <div class="gallery-grid">
+
+    <div class="gallery-item reveal-card">
+      <div class="img-wrapper">
+        <img src="img/hoanhac.png" alt="Hoàn Nhạc"/>
+        <p class="caption">Hòa nhạc ở nhà văn hóa sinh viên</p>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-card">
+      <div class="img-wrapper">
+        <img src="img/pnvn.png" alt="PNVN"/>
+        <p class="caption">20/10 của năm 2022</p>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-card">
+      <div class="img-wrapper">
+        <img src="img/nhvl.png" alt="NK"/>
+        <p class="caption">Sự kiện ở IU</p>
+      </div>
+    </div>
+
+    <div class="gallery-item reveal-card">
+      <div class="img-wrapper">
+        <img src="img/drl.png" alt="Bữa ăn"/>
+        <p class="caption">Sự kiện của trường</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</section>
+
+    <!-- Awards -->
+<section id="awards" class="container-section container reveal">
+  <h2 class="section-title">Awards</h2>
+  <div class="awards-list">
+    <p class="award-item no-awards">
+      <i class="bx bx-award"></i>
+      Hiện tại chưa có thành tựu nào
+    </p>
+  </div>
+  <div class="awards-list">
+    <p class="award-item no-awards">
+      <i class="bx bx-award"></i>
+      Hiện tại chưa có thành tựu nào
+    </p>
+  </div>
+</section>
+<!-- thank you -->
+
+
+    <!-- Contact -->
+
+<section id="contact" class="container-section">
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-grid">
+    <!-- Form -->
+    <form id="contactForm" class="form-card reveal-card" novalidate>
+      <input id="name" type="text" placeholder="Họ tên" required />
+      <input id="email" type="email" placeholder="Email" required />
+      <textarea id="message" rows="6" placeholder="Nội dung..." required></textarea>
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Gửi</button>
+        <button type="reset" class="btn ghost">Xóa</button>
+      </div>
+      <div id="formMsg" class="small muted" style="margin-top: 8px"></div>
+    </form>
+
+    <!-- Contact Info -->
+    <aside class="contact-card reveal-card">
+      <h3>Thông tin liên hệ</h3>
+      <p>Email: dinhphan0511@gmail.com</p>
+      <p>Phone: 0938179491</p>
+      <div class="contact-social" style="margin-top: 12px">
+        <a href="https://github.com/PhanDinh2005"><i class="bx bxl-github"></i></a>
+        <a href="https://www.facebook.com/graperuu"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-x"></i></a>
+      </div>
+    </aside>
+  </div>
+</section>
+    <!-- Footer -->
+
+<!-- Footer -->
+<footer class="site-footer">
+  <canvas id="footer-particles"></canvas>
+  <div class="footer-inner container">
+    <div class="credit">
+      © <span id="year"></span> Phan Văn Đỉnh — Portfolio
+    </div>
+    <div class="small muted">Thanks for viewing my portfolio.</div>
+  </div>
+</footer>
+
+
+
+    <!-- JS -->
+    <script src="js/typing.js"></script>
+    <script src="js/particle.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/prj.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/experience.js"></script>
+    <script src="js/career.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/demo-cv.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

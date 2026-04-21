@@ -1,0 +1,55 @@
+/* css/animations.css */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+.float-slow {
+  animation: floaty 6s ease-in-out infinite;
+}
+@keyframes floaty {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.cursor {
+  display: inline-block;
+  margin-left: 6px;
+  animation: blink 1s steps(2) infinite;
+  color: var(--accent1);
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+/* small hover shine for project images */
+.project-media::after {
+  content: "";
+  position: absolute;
+  left: -40%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  transform: skewX(-20deg) translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.06)
+  );
+  transition: transform 0.9s ease;
+}
+.project-card:hover .project-media::after {
+  transform: skewX(-20deg) translateX(220%);
+}

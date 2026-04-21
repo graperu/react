@@ -1,0 +1,121 @@
+.timeline-wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--glass-bg);
+  border-left: 1px solid var(--glass-border);
+  border-right: 1px solid var(--glass-border);
+  transform: translateX(-50%);
+  border-radius: 999px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.timeline {
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50%;
+  position: relative;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.timeline-item.right {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 50%;
+}
+
+.timeline-content {
+  width: calc(100% - 40px);
+  padding: 1.5rem;
+}
+
+.timeline-item.left .timeline-content {
+  margin-right: 40px;
+}
+
+.timeline-item.right .timeline-content {
+  margin-left: 40px;
+}
+
+.time {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.timeline-point {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: var(--bg-color);
+  border: 4px solid var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--accent-glow);
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-point {
+  background: var(--accent-color);
+  transform: translate(-50%, -50%) scale(1.3);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    padding-right: 0;
+    padding-left: 50px;
+  }
+  
+  .timeline-item.right {
+    padding-left: 50px;
+  }
+  
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .timeline-point {
+    left: 20px;
+  }
+}
