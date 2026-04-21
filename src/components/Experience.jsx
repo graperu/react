@@ -1,44 +1,59 @@
-import { motion } from 'framer-motion';
 import './Experience.css';
 
-const timelineData = [
-  { id: 1, time: 'Sep 2023 — Dec 2023', title: 'Năm 1', desc: 'Toán 1, Lập trình cơ bản, Tin học đại cương' },
-  { id: 2, time: 'Jan 2024 — Jun 2024', title: 'Năm 1 kỳ 2', desc: 'C++, CTDL & GT, TRR, MMT' },
-  { id: 3, time: 'Sep 2024 — Jun 2025', title: 'Năm 2', desc: 'OS, Computer Architecture, Web Basics...' },
-  { id: 4, time: 'Jul 2025 — Present', title: 'Năm 3', desc: 'Frontend, Personal Projects' },
-  { id: 5, time: 'Jan 2026 — Mar 2026', title: 'Coming Soon', desc: '...' },
-  { id: 6, time: 'Apr 2026 — Dec 2026', title: 'Coming Soon', desc: '...' },
-];
-
 const Experience = () => {
+  const experiences = [
+    {
+      title: "Học tập tại Đại học GTVT TP.HCM",
+      dateStart: "09/2023",
+      dateEnd: "Hiện tại",
+      desc: "Bắt đầu chương trình đào tạo Cử nhân Công nghệ Thông tin. Tập trung vào kiến trúc phần mềm, cấu trúc dữ liệu và giải thuật."
+    },
+    {
+      title: "Tham gia các khóa học chuyên sâu",
+      dateStart: "01/2024",
+      dateEnd: "06/2024",
+      desc: "Nghiên cứu về ReactJS, NodeJS và các Framework hiện đại. Hoàn thành chứng chỉ thiết kế Web."
+    },
+    {
+      title: "Phát triển dự án cá nhân",
+      dateStart: "07/2024",
+      dateEnd: "Hiện tại",
+      desc: "Áp dụng kiến thức xây dựng các ứng dụng Web thực tế. Học cách triển khai lên các server."
+    }
+  ];
+
   return (
-    <section id="experience" className="section container">
-      <h2 className="section-title">Experience & <span className="text-gradient">Timeline</span></h2>
-      
-      <div className="timeline-wrapper">
-        <div className="timeline-line"></div>
-        
-        <div className="timeline">
-          {timelineData.map((item, index) => {
-            const isLeft = index % 2 === 0;
-            return (
-              <motion.div 
-                key={item.id}
-                className={`timeline-item ${isLeft ? 'left' : 'right'}`}
-                initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6 }}
-              >
-                <div className="timeline-content glow-box">
-                  <div className="time">{item.time}</div>
-                  <div className="title">{item.title}</div>
-                  <div className="desc">{item.desc}</div>
+    <section id="experience" className="experience section">
+      <div className="experience__container">
+        <h2 className="section-title text-gradient">Kinh nghiệm học tập & Làm việc</h2>
+        <p className="experience__subtitle">
+          Dưới đây là các cột mốc trong quá trình học tập và hành trình theo đuổi ngành IT của tôi.
+        </p>
+
+        <div className="projects__timeline">
+          <div className="projects__progress"></div>
+          
+          {experiences.map((exp, idx) => (
+            <article className="projects__item" key={idx}>
+              <div className="projects__item-left">
+                <time className="projects__date">
+                  <span className="projects__date-start">{exp.dateStart}</span>
+                  <i className="fa-solid fa-arrow-down-long projects__date-sep"></i>
+                  <span className="projects__date-end">{exp.dateEnd}</span>
+                </time>
+              </div>
+              <div className="projects__item-center">
+                <div className="projects__item-circle"></div>
+              </div>
+              <div className="projects__item-right">
+                <div className="projects__content">
+                  <h3 className="projects__name">{exp.title}</h3>
+                  <p className="projects__description">{exp.desc}</p>
                 </div>
-                <div className="timeline-point"></div>
-              </motion.div>
-            );
-          })}
+              </div>
+            </article>
+          ))}
+          
         </div>
       </div>
     </section>

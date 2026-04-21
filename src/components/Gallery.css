@@ -8,6 +8,12 @@
   cursor: pointer;
   overflow: hidden;
   border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: border-color 0.3s ease;
+}
+
+.gallery-item:hover {
+  border-color: rgba(234, 40, 91, 0.3);
 }
 
 .gallery-img-wrapper {
@@ -77,11 +83,11 @@
   max-height: 80vh;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 0 30px var(--accent-glow);
+  box-shadow: 0 0 30px rgba(234, 40, 91, 0.4);
 }
 
 .lightbox-caption {
-  color: var(--text-primary);
+  color: var(--text);
   margin-top: 1rem;
   font-size: 1.2rem;
   text-align: center;
@@ -100,5 +106,5 @@
 }
 
 .lightbox-close:hover {
-  color: var(--accent-color);
+  color: var(--r-base);
 }

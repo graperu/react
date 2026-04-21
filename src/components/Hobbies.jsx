@@ -10,10 +10,10 @@ const hobbies = [
 
 const Hobbies = () => {
   return (
-    <section id="hobby" className="section container">
-      <h2 className="section-title">My <span className="text-gradient">Hobbies</span></h2>
-      
-      <div className="hobby-grid">
+    <section id="hobbies" className="section">
+      <div className="container-body">
+        <h2 className="section-title text-gradient">Sở thích</h2>
+        <div className="hobbies-grid">
         {hobbies.map((hobby, index) => (
           <motion.div 
             key={hobby.title}
@@ -31,6 +31,7 @@ const Hobbies = () => {
             <p className="hobby-desc">{hobby.desc}</p>
           </motion.div>
         ))}
+      </div>
       </div>
     </section>
   );

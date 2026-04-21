@@ -13,10 +13,11 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <section id="gallery" className="section container">
-      <h2 className="section-title"><span className="text-gradient">Gallery</span></h2>
-      
-      <div className="gallery-grid">
+    <section id="gallery" className="section">
+      <div className="container-body">
+        <h2 className="section-title text-gradient">Bộ sưu tập cá nhân</h2>
+        <p className="projects__desc">Những khoảnh khắc đáng nhớ trong quá trình học tập và làm việc.</p>
+        <div className="gallery-grid">
         {galleryData.map((item, index) => (
           <motion.div 
             key={item.id}
@@ -62,6 +63,7 @@ const Gallery = () => {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>
     </section>
   );
 };

@@ -3,10 +3,12 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <section id="contact" className="section container">
-      <h2 className="section-title"><span className="text-gradient">Contact</span></h2>
-      
-      <div className="contact-grid">
+    <section id="contact" className="section">
+      <div className="container-body">
+        <h2 className="section-title text-gradient">Let's work together</h2>
+        <p className="projects__desc" style={{marginBottom: "40px"}}>Có dự án đang ấp ủ? Hãy liên hệ để cùng phân tích yêu cầu, đề xuất giải pháp và bắt đầu triển khai nhanh nhất có thể.</p>
+        
+        <div className="contact-grid">
         <motion.form 
           className="contact-form glow-box"
           initial={{ opacity: 0, x: -50 }}
@@ -61,6 +63,7 @@ const Contact = () => {
             <a href="#" target="_blank" rel="noreferrer"><i className="bx bxl-twitter"></i></a>
           </div>
         </motion.div>
+      </div>
       </div>
     </section>
   );
