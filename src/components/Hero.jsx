@@ -21,7 +21,7 @@ const Hero = () => {
             <a className="banner__btn" href="#" download>Download CV <span><i className="fa-solid fa-download"></i></span></a>
             <ul className="banner__social">
               <li className="banner__social-item">
-                <a className="banner__social-link" href="https://github.com/PhanDinh2005" target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i></a>
+                <a className="banner__social-link" href="https://github.com/graperu" target="_blank" rel="noreferrer"><i className="fa-brands fa-github"></i></a>
               </li>
               <li className="banner__social-item">
                 <a className="banner__social-link" href="https://www.facebook.com/graperuu" target="_blank" rel="noreferrer"><i className="fa-brands fa-facebook-f"></i></a>
@@ -33,7 +33,7 @@ const Hero = () => {
         <figure className="banner__avatar">
           <img
             className="banner__photo"
-            src="/img/conmeo.png"
+            src="/img/nhokhoc.png"
             alt="Portrait"
           />
           <span className="banner__ring banner__ring--outer"></span>

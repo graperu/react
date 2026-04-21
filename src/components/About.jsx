@@ -22,9 +22,9 @@ const About = () => {
           </aside>
           <div className="about__details-wrapper">
             <div className="about__details">
-              <div className="about__detail"><b><i className="fa-solid fa-cake-candles"></i> Ngày sinh:</b><span>05/11/2005</span></div>
-              <div className="about__detail"><b><i className="fa-solid fa-user"></i> Tuổi:</b><span>19</span></div>
-              <div className="about__detail"><b><i className="fa-brands fa-github"></i> Github:</b><span>PhanDinh2005</span></div>
+              <div className="about__detail"><b><i className="fa-solid fa-cake-candles"></i> Ngày sinh:</b><span>12/08/2005</span></div>
+              <div className="about__detail"><b><i className="fa-solid fa-user"></i> Tuổi:</b><span>20</span></div>
+              <div className="about__detail"><b><i className="fa-brands fa-github"></i> Github:</b><span>graperu</span></div>
               <div className="about__detail"><b><i className="fa-solid fa-envelope"></i> Email:</b><span>dinhphan0511@gmail.com</span></div>
               <div className="about__detail"><b><i className="fa-solid fa-graduation-cap"></i> Học vấn:</b><span>Sinh viên Công nghệ thông tin</span></div>
               <div className="about__detail"><b><i className="fa-solid fa-phone"></i> Điện thoại:</b><span>(+84) 938 179 491</span></div>

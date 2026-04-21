@@ -27,8 +27,12 @@ const Contact = () => {
             <textarea rows="5" placeholder="Nội dung..." required></textarea>
           </div>
           <div className="form-actions">
-            <button type="submit" className="btn btn-primary">Gửi Message</button>
-            <button type="reset" className="btn btn-ghost">Xóa Form</button>
+            <button type="submit" className="banner__btn submit-btn" style={{border: 'none', cursor: 'pointer'}}>
+              Gửi Message <span><i className="fa-solid fa-paper-plane"></i></span>
+            </button>
+            <button type="reset" className="banner__btn reset-btn" style={{background: 'rgba(255,255,255,0.1)', color: 'var(--text)', border: 'none', cursor: 'pointer'}}>
+              Xóa Form <span><i className="fa-solid fa-trash"></i></span>
+            </button>
           </div>
         </motion.form>
 

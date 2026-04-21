@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './Gallery.css';
 
 const galleryData = [
-  { id: 1, src: '/img/hoanhac.png', caption: 'Hòa nhạc ở nhà văn hóa sinh viên' },
-  { id: 2, src: '/img/pnvn.png', caption: '20/10 của năm 2022' },
-  { id: 3, src: '/img/nhvl.png', caption: 'Sự kiện ở IU' },
-  { id: 4, src: '/img/drl.png', caption: 'Sự kiện của trường' }
+  { id: 1, src: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop', caption: 'Làm việc nhóm cùng đồng đội' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop', caption: 'Setup góc Dev yêu thích' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop', caption: 'Thuyết trình dự án cuối kỳ' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop', caption: 'Tham dự hội thảo công nghệ' }
 ];
 
 const Gallery = () => {
