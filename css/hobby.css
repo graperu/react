@@ -1,0 +1,129 @@
+.hobby {
+  padding: 72px 24px; /* giữ padding giống các section khác */
+  background: var(--bg);
+}
+
+.hobby .hobby-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: var(--container); /* khớp container với các section khác */
+  margin: 0 auto; /* căn giữa */
+}
+
+.hobby-box {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 24px 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--glow);
+  border: 1px solid rgba(48, 8, 8, 0.05);
+}
+
+.hobby-box:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 4px var(--accent1), 0 0 8px var(--accent2);
+  border-color: var(--accent1);
+}
+
+.hobby-box i {
+  font-size: 3.6rem;
+  color: var(--accent1);
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.hobby-box:hover i {
+  color: var(--accent2);
+  text-shadow: 0 0 4px var(--accent1), 0 0 8px var(--accent2);
+}
+
+.hobby-box h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.hobby-box p {
+  font-size: 1.3rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.hobby-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hobby-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hobby-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.led-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  background: linear-gradient(
+    90deg,
+    #6ee7b7,
+    #8b5cf6,
+    #facc15,
+    #f472b6,
+    #6ee7b7
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ledGradient 3s linear infinite;
+}
+
+@keyframes ledGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Nếu muốn icon cũng nhấp nháy theo màu LED */
+.hobby-box i {
+  font-size: 2rem;
+  background: linear-gradient(
+    90deg,
+    #6ee7b7,
+    #8b5cf6,
+    #facc15,
+    #f472b6,
+    #6ee7b7
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ledGradient 3s linear infinite;
+}
+/* Hobbies Section */
+.hobby .container-section {
+  max-width: 1080px; /* giới hạn chiều rộng giống About */
+  margin: 0 auto; /* căn giữa */
+  padding: 0 20px; /* padding hai bên vừa phải */
+  box-sizing: border-box;
+}
+
+/* Section title */
+.hobby .section-title {
+  margin-bottom: 24px;
+}
